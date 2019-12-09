@@ -112,7 +112,7 @@ add_action('rest_api_init', function (){
 		'callback' => 'mikeD_ContactPost'
 	]);
 
-	register_rest_route('md/v1', 'contacts',[
+	register_rest_route('md/v1', 'contacts/(?P<slug>[a-zA-Z0-9-]+)',[
 		'methods' => 'DELETE',
 		'callback' => 'mikeD_ContactDelete'
 	]);
